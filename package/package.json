@@ -1,6 +1,6 @@
 {
   "name": "@qe-solutions/test-automation-library",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Wrapper Class over the Playwright and additional libraries",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
