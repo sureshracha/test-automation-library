@@ -17,7 +17,7 @@ import * as context from './testContext';
 
 import { transports, format } from "winston";
 
-function options(loggerOptions: { fileName: string, logfileFolder: string }) {
+export function options(loggerOptions: { fileName: string, logfileFolder: string }) {
     return {
         transports: [
             new transports.File({
