@@ -9,9 +9,9 @@
     "build": "tsup"
   },
   "keywords": [
-    "playwright",
-    "UiElement",
-    "wrapper"
+    "file utils",
+    "string utils",
+    "logger"
   ],
   "author": "sureshracha",
   "license": "MIT",
