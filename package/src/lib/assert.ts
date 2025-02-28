@@ -1,6 +1,7 @@
-import { expect } from 'chai';
+ 
 import * as context from "./testContext";
 import * as logger from './logger';
+import assert from 'assert';
  
  
 
@@ -113,9 +114,10 @@ import * as logger from './logger';
             await logger.info(`hardAssert :: ${message} {Actual : [${actual}] - Expected [${expected}]}`);
         } else {
             await logger.error(`hardAssert :: ${message} {Actual : [${actual}] - Expected [${expected}]}`);
-           
+            throw Error (`hardAssert :: ${message} {Actual : [${actual}] - Expected [${expected}]}`);
+        
         }
-        expect(actual, `hardAssert :: ${message} \n{Actual : [${actual}] - Expected [${expected}]}`).equals(expected);
+       
     }
 
     export async function hardContains(actual: string, expected: string, message: string) {
@@ -123,8 +125,9 @@ import * as logger from './logger';
             await logger.info(`hardContains :: ${message} {Actual : [${actual}] - Expected [${expected}]}`);
         } else {
             await logger.error(`hardContains :: ${message} {Actual : [${actual}] - Expected [${expected}]}`);
+            throw Error (`hardContains :: ${message} {Actual : [${actual}] - Expected [${expected}]}`);
+            
         }
-        expect(actual, `hardContains :: ${message} \n{Actual : [${actual}] - Expected [${expected}]}`).contains(expected);
     }
 
     export async function hardNotContains(actual: string, expected: string, message: string) {
@@ -132,10 +135,11 @@ import * as logger from './logger';
             await logger.info(`hardNotContains :: ${message} {String : [${actual}] - Substring [${expected}]}`);
         } else {
             await logger.error(`hardNotContains :: ${message} {String : [${actual}] - Substring [${expected}]}`);
+            throw Error( `hardNotContains :: ${message} \n{Actual : [${actual}] - Expected [${expected}]}`)
            
         }
-        expect(actual, `hardNotContains :: ${message} \n{Actual : [${actual}] - Expected [${expected}]}`).not.contains(expected);
-    }
+       
+     }
 
 
 
