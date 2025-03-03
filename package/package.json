@@ -16,6 +16,7 @@
   "author": "sureshracha",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^22.13.8",
     "tsup": "^8.4.0"
   },
   "dependencies": {
