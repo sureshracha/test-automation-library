@@ -1,6 +1,6 @@
 {
   "name": "@qe-solutions/test-automation-library",
-  "version": "0.0.4",
+  "version": "0.0.8",
   "description": "Wrapper Class over the Playwright and additional libraries",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -9,20 +9,18 @@
     "build": "tsup"
   },
   "keywords": [
-    "playwright",
-    "UiElement",
-    "wrapper"
+    "file utils",
+    "string utils",
+    "logger"
   ],
   "author": "sureshracha",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^22.13.8",
     "tsup": "^8.4.0"
   },
   "dependencies": {
-    "@types/chai": "^5.0.1",
-    "@types/node": "^22.13.5",
     "alasql": "^4.6.3",
-    "chai": "^5.2.0",
     "mysql": "^2.18.1",
     "oracledb": "^6.7.2",
     "typescript": "^5.7.3",

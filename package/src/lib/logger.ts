@@ -1,14 +1,14 @@
 import * as context from './testContext';
 
  
-  export function  info(msg: string) {
+  export async function  info(msg: string) {
         context.testContext.logger.info(msg);
         if (!msg.toLowerCase().includes('password'))
             console.log(msg);
     }
 
      
-      export function error(msg: string)  {
+      export async function error(msg: string)  {
         context.testContext.logger.error(msg);
         console.log(msg);
     }
@@ -17,7 +17,7 @@ import * as context from './testContext';
 
 import { transports, format } from "winston";
 
-function options(loggerOptions: { fileName: string, logfileFolder: string }) {
+export async function options(loggerOptions: { fileName: string, logfileFolder: string }) {
     return {
         transports: [
             new transports.File({
